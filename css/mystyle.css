@@ -1,0 +1,149 @@
+.response_area {
+font: 11px/15px sans-serif;
+border-radius: 4px;
+text-align:right;
+color:red;
+width:320px;
+padding:5px;
+margin:0px; 
+}
+
+.table_disp {
+font: 12px/15px sans-serif;
+text-align:left;
+color:#001;
+width:430px;
+padding:0px;
+margin:0px; 
+clear:both;
+}
+
+.theform {
+   background: #fff;
+   border : 1px solid #000;
+   border-radius: 4px;
+   width:430px;
+   padding : 5px 10px;
+   font: 13px/20px sans-serif;
+ }
+
+.second {
+   background: #fff;
+   border : 1px solid #000;
+   border-radius: 4px;
+   width:430px;
+   padding : 5px 10px;
+   font: 13px/20px sans-serif;
+}
+
+.select_yr, .form_branch {
+ float:left;
+}
+
+.select_br, .gm, .gm:hover {
+ float:right;
+ margin-right: 25%;
+}
+
+
+.clg{
+ clear:both;
+}
+
+input {
+  background: #F9F7E5;
+  border: 1px solid #c6c9cc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 0 #fff;
+  color: #555;
+  font: 12px/20px sans-serif;
+  margin: 0 0 20px 0;
+  padding: 5px;
+  width: 180px;
+}
+
+input:hover {
+  background: #F9F7E5;
+  border: 2px solid #c6c9cc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 0 #fff;
+  color: #555;
+  font: 12px/20px sans-serif;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  padding: 5px;
+  width: 180px;
+}
+
+.rad, .rad:hover {
+  width:10px;
+}
+
+.submit_button, .print {
+  margin-left:23%;
+  background: #EBDBDB;
+  float: center;
+  color: #555;
+  width: 100px;
+}
+
+.reset_button {
+  background: #EBDBDB;
+  float: center;
+  color: #555;
+  width: 100px;
+}
+
+.submit_button:hover, .print:hover {
+  margin-left:23%;
+  float: center;
+  background: #DEC8C8;
+  border: 3px solid #c6c9cc;
+  border-radius: 4px;
+  color: #555;
+  width: 100px;
+  font-weight: bold;
+  
+}
+
+.reset_button:hover {
+  margin-right:23%;
+  float: center;
+  background: #DEC8C8;
+  border: 3px solid #c6c9cc;
+  border-radius: 4px;
+  color: #555;
+  width: 100px;
+  font-weight: bold;
+  
+}
+
+select {
+  background: #F9F7E5;
+  border: 1px solid #c6c9cc;
+  border-radius: 5px;
+  box-shadow: outset 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 0 #fff;
+  color: #555;
+  font: 12px/20px sans-serif;
+  margin: 0 0 15px 0;
+  padding: 5px;
+  width: 135px;
+}
+
+select:hover {
+  background: #DEC8C8;
+  border: 1px solid #c6c9cc;
+  border-radius: 7px;
+  box-shadow: outset 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 0 #fff;
+  color: #555;
+  font: 12px/20px sans-serif;
+  font-weight: bold;
+  margin: 0 0 15px 0;
+  padding: 5px;
+  width: 135px;
+}
+
+table,tr,td {
+border:1px solid black;
+}
+

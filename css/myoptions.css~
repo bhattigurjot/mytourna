@@ -1,0 +1,9 @@
+.option_response {
+font: 11px/15px sans-serif;
+border-radius: 4px;
+text-align:right;
+color:red;
+width:320px;
+padding:5px;
+margin:0px; 
+}
