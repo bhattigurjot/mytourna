@@ -48,6 +48,7 @@ function mytourna_empty() {
 function the_action_function(){
  	//Check if there's an empty field
 	if ( !empty($_POST['game']) && !empty($_POST['tourn']) && !empty($_POST['name']) && !empty($_POST['year']) && !empty($_POST['branch']) && !empty($_POST['c_roll']) && !empty($_POST['u_roll']) ){
+		
 	global $wpdb;
 	$table_name = $wpdb->prefix."mytourna";
 
@@ -59,11 +60,29 @@ function the_action_function(){
 	$vc_roll = $_POST['c_roll'];
 	$vu_roll = $_POST['u_roll'];
 
+	$check_croll=$wpdb->get_var( "SELECT * FROM $table_name WHERE c_roll = '$vc_roll'" );
+	$check_uroll=$wpdb->get_var( "SELECT * FROM $table_name WHERE u_roll = '$vu_roll'" );
 
-	$wpdb->insert( $table_name, array( 'game'=>$vgame, 'tourn'=>$vtourn, 'name'=>$vname, 'year'=>$vyear, 'branch'=>$vbranch, 'c_roll'=>$vc_roll, 'u_roll'=>$vu_roll), array('%s', '%s', '%s', '%s', '%s', '%d', '%d'));
-	echo"Thankyou! Your form has been submitted. ";
+		if( $check_croll!=0 ){
+
+		echo "This College Roll No. has already been registered. Please ensure that you have entered correct Roll No.";
+
+		} else if( $check_uroll!=0 ){
+
+		echo "This University Roll No. has already been registered. Please ensure that you have entered correct Roll No.";
+
+		} else{
+
+		$wpdb->insert( $table_name, array( 'game'=>$vgame, 'tourn'=>$vtourn, 'name'=>$vname, 'year'=>$vyear, 'branch'=>$vbranch, 'c_roll'=>$vc_roll, 'u_roll'=>$vu_roll), array('%s', '%s', '%s', '%s', '%s', '%d', '%d'));
+
+		echo "Thankyou! Your form has been submitted. ";
+
+		}
+
 	} else{
-	echo"Some fields are empty! Kindly fill them.";
+
+	echo "Some fields are empty! Kindly fill them.";
+
 	}// this is passed back to the javascript function
 
  	die();// wordpress may print out a spurious zero without this - can be particularly bad if using json
